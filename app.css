@@ -1,5 +1,69 @@
-#pTitle {
+#dvMain{
 
-    font-size: 32px;
+    font-family: Helvetica;
 
 }
+
+
+#pTitle {
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 50px;
+    
+    margin-bottom: 100px;
+}
+
+
+.scopeHeader {
+	
+	font-size: 28px;
+	text-decoration: underline;
+
+	
+}
+
+ 
+/* #dvDemographics { */
+.scope {
+	
+	margin-top: 30px;
+	margin-left: 25px;
+	/* border: 1px solid blue; */
+	/* height: 20%; */
+	/* display: flex; */
+	/* align-items: middle; */
+	margin-bottom: 100px;
+	
+}
+
+
+.scopeDetails {
+
+    font-size: 22px;
+	
+}	
+
+
+#ulImmuns {
+
+    font-size: 22px;
+
+
+
+}
+
+
+.immuns {
+
+    margin-top = 10px;
+    margin-bottom: 10px;
+
+}
+
+
+

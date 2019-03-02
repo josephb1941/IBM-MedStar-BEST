@@ -5,7 +5,8 @@
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src='loadData.js'></script>
-	 <script src='fhir-client-v0.1.12.js'></script>
+	<script src='moment.js'></script>
+	<script src='fhir-client-v0.1.12.js'></script>
 	
 	 <script src='bluebird.js'></script>
 	 <link rel='stylesheet' type='text/css' href='app.css'>
@@ -19,32 +20,28 @@
 	
 	<div id="dvTitle">
 	
-		<p id="pTitle"> This is the First SMART on FHIR application for IBM/MedStar Project</p>
+		<p id="pTitle"> This is the First SMART on FHIR Application for IBM/MedStar Project</p>
 	</div>
 
 	
-	<!-- <div class="scope" id="dvDemographics"> -->
+	<div class="scope" id="dvDemographics">
 	
-		<!-- <p class="scopeHeader" id="pDemTitle">Patient Demographics</p> -->
-		<!-- <p class="scopeDetails" id="pName">Patient Name: </p> -->
-		<!-- <p class="scopeDetails" id="pBirthDate">Date of Birth: </p> -->
-		<!-- <p class="scopeDetails" id="pSex">Sex: </p> -->
+		<p class="scopeHeader" id="pDemTitle">Patient Demographics</p>
+		<p class="scopeDetails" id="pName">Patient Name: </p>
+		<p class="scopeDetails" id="pSex">Sex: </p>
 		
-	<!-- </div> -->
+	</div>
  
-	<!-- <div class="scope" id="dvAllergies"> -->
+	<div class="scope" id="dvImmunizations">
 		
-		<!-- <p class="scopeHeader" id="pAllergiesTitle">Patient Allergies</p> -->
-		<!-- <!-- <p class="scopeDetails" id="pAlergyName">Substance: </p> --> 
-		<!-- <ol id="olAllergies"> -->
+		<p class="scopeHeader" id="pImmunizationsTitle">Patient Immunizations</p>
+
+		<ul id="ulImmuns">
 		
-		<!-- <li>Coffee</li> -->
-		<!-- <li>Tea</li> -->
-		<!-- <li>Milk</li> -->
 		
-		<!-- </ol> -->
+		</ul>
 		
-	<!-- </div> -->
+	</div>
 
 
 	</DIV>
