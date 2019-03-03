@@ -39,46 +39,27 @@ function addDemographics(patient) {
 
 function  addImmunizations(immunizations) {
 
-    var numImmuns = immunizations.length;
+    // var numImmuns = immunizations.length;
 
     var root = document.getElementById("ulImmuns");
 
-    for(var i = 0; i < numImmuns; i++) {
+    _.each(immunizations, function(immunization) {
 
-	var immunization = immunizations[i];
+	root.appendChild(createListItem(immunization));
 
-	console.log(immunization);
-
-	//alert(immunization.date);
-
-	// var adminDate = immunization.date;
-
-	// var temp = moment(adminDate);
-
-	// console.log(temp.format("M/D/YYYY h:m:sa"));
-
-	// var child = createListItem(immunization.vaccineCode.text);
-
-	var child = createListItem(immunization);
-	
-	root.appendChild(child);
-
-    }
-
+    });
+    
 }
 
 function createListItem(immunization) {
 
     var elem = document.createElement("LI");
 
-
     var vaccine = immunization.vaccineCode.text;
 
-    var givenDtTm = moment(immunization.date).format("M/D/YYYY h:m:sa");
+    var givenDtTm = moment(immunization.date).format("M/D/YYYY @ h:m:sa");
     
-    // var textNode = document.createTextNode(nodeText);
-
-    var textNode = document.createTextNode(vaccine + " - Given: " + givenDtTm);
+    var textNode = document.createTextNode(vaccine + " - Given on: " + givenDtTm);
     
     elem.className = 'immuns';
 
@@ -103,11 +84,12 @@ function promiseMe() {
     function onReady(smart)  {
 	
 	if (smart.hasOwnProperty('patient')) {
-	    
+
+	    //Fetch FHIR data
 	    var patient = smart.patient;
 	    var pt = patient.read();
 	    
-	    
+	    //Get immunization records
 	    var obv = smart.patient.api.fetchAll({
 		type: 'Immunization',
 		query: {}
